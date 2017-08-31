@@ -13,15 +13,11 @@ endfunction
 
 "Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
-Plug 'wakatime/vim-wakatime'
-Plug 'junegunn/heytmux'
-Plug 'sbdchd/neoformat'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'danro/rename.vim'                             " allow to :Rename files
 Plug 'rking/ag.vim'                                 " lightining fast :Ag searcher
 Plug 'sheerun/vim-polyglot'
-Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/limelight.vim'
@@ -29,10 +25,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-sensible'                           " sensible defaults
 Plug 'pangloss/vim-javascript'
 Plug 'airblade/vim-gitgutter'
-Plug 'zchee/deoplete-jedi'
 Plug 'szw/vim-g'                                    " search selected text in google
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -41,10 +35,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs'                    " js autocomplete
 
 call plug#end()
