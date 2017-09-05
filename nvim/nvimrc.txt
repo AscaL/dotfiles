@@ -43,8 +43,6 @@ call plug#end()
 " --------------------------------------
 "  _testing
 " --------------------------------------
-noremap Q @q
-vnoremap <D-c> y
 set timeout timeoutlen=1000 ttimeoutlen=10        " faster esc - maybe :|
 set showcmd                                       " show me what I'm typing
 set autowrite                                     " automatically save before :next, :make etc
@@ -101,9 +99,7 @@ autocmd FileType help wincmd L
 " --------------------------------------
 inoremap      jk  <Esc>
 inoremap      kj  <Esc>
-inoremap (<Space>  ();<Esc>hi
-inoremap      (;   ();<Esc>o
-inoremap      ()   ()
+inoremap      jj  <Esc>
 
 " --------------------------------------
 "  _command mapping
@@ -115,7 +111,6 @@ cabbrev rp Rp
 " --------------------------------------
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
-vmap <C-d> :Dash<CR>
 
 let g:ctrlp_map = '<c-k>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -124,34 +119,23 @@ let g:ctrlp_cmd = 'CtrlP'
 "  _space mapping
 " --------------------------------------
 nnoremap <SPACE> <Nop>
+inoremap <Esc> <Nop>
 let mapleader="\<Space>"
 
 nnoremap <leader>= yypVr=
 
-nnoremap <leader>vimrc :tabe ~/.dotfiles/vim/nvim/nvimrc<cr>
+nnoremap <leader>ve :tabe $MYVIMRC<CR>
+nnoremap <Leader>vs   :source $MYVIMRC<CR> 
 
 " _single letter 
 nmap <Leader>w    :w<CR>  
 nnoremap <Leader>q    :q<CR>  
-nnoremap <Leader>y    :%y<CR> 
-nnoremap <Leader>f   :source $MYVIMRC<CR> 
 " search files inside current dir
 nnoremap <Leader>e    :Files<CR> 
 
-" switch dir for fzf searching to current dir
-map <Leader>cd :lcd %:p:h<CR>
-" yank xml block to next line
-nnoremap <Leader>aw    vat:t'><CR>'[O<Esc><CR> 
-" yank function block
-nnoremap <Leader>yf    :exe search('^function','cb')';/}/y'<CR> 
-" dash doc lookup
-nnoremap <Leader>at   :Dash<CR>
 nnoremap <Leader>aa   :wa<CR>
 nnoremap <Leader>vq   :wqall<CR>
 nnoremap <Leader>vQ   :qa<CR>
-nnoremap <Leader>ii   :PlugInstall<CR>
-nnoremap <Leader>ia   :PlugUpdate<CR>
-nnoremap <Leader>vm   :make<CR>
 nnoremap <leader>l :%d<cr>
 
 
@@ -191,10 +175,6 @@ let g:deoplete#enable_at_startup = 1               " activate deoplete
 
 " autocomplete with tab
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-
-" run goimports on save
-let g:go_fmt_command = "goimports"
 
 " _fzf
 " Mapping selecting mappings
