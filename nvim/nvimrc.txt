@@ -126,6 +126,7 @@ nnoremap <leader>= yypVr=
 
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <Leader>vs   :source $MYVIMRC<CR> 
+nnoremap <Leader>te :tabe ~/dotfiles/tmux/tmux.conf<CR> 
 
 " _single letter 
 nmap <Leader>w    :w<CR>  
