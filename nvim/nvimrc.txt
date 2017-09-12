@@ -127,6 +127,7 @@ nnoremap <leader>= yypVr=
 nnoremap <leader>ve :tabe $MYVIMRC<CR>
 nnoremap <Leader>vs   :source $MYVIMRC<CR> 
 nnoremap <Leader>te :tabe ~/dotfiles/tmux/tmux.conf<CR> 
+nnoremap <Leader>ts :source ~/dotfiles/tmux/tmux.conf<CR>
 
 " _single letter 
 nmap <Leader>w    :w<CR>  
@@ -138,12 +139,6 @@ nnoremap <Leader>aa   :wa<CR>
 nnoremap <Leader>vq   :wqall<CR>
 nnoremap <Leader>vQ   :qa<CR>
 nnoremap <leader>l :%d<cr>
-
-
-" run commands in new splits
-nnoremap <Leader>tt :tabedit <Bar> term.
-nnoremap <Leader>ts :split <Bar> term.
-nnoremap <Leader>tv :vsplit <Bar> term.
 
 nnoremap <silent><expr> <C-L> winnr()==g:NERDTree.GetWinNum() ? ":NERDTreeClose\<CR>" : ":NERDTreeFocus\<CR>"
 nnoremap <C-s> :w<cr>
