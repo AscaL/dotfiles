@@ -150,4 +150,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$HOME/.yarn/bin:$PATH"
 source <(antibody init)
 
+# TheFuck requires this
+eval $(thefuck --alias)
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
