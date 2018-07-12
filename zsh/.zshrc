@@ -1,8 +1,16 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/AscaL/.oh-my-zsh
+
+# Adding this line to end of .bash_profile will make python command 
+# point to python2
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Virtualenv/VirtualenvWrapper
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
