@@ -145,6 +145,17 @@ docker-rm-exited () { docker rm $( docker ps -q -f status=exited) }
 docker-stop-all() { docker stop $(docker ps -a -q) }
 docker-all() { docker ps -a -q }
 
+# cat alias
+alias cat="bat"
+
+# ping alias
+alias ping="prettyping --nolegend"
+
+# fzf + ctrl+o
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
 
 # ls, the common ones I use a lot shortened for rapid fire usage
 alias l='ls -lFh'     #size,show type,human readable
